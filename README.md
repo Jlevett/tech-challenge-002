@@ -3,7 +3,7 @@
 ##  About
 
 ### Summary
-A FormComponent that renders several InputComponents that each contain a input text field that filter certain characters. The FormComponent counts and display InputComponent Renders and has a reset values button.
+A FormComponent that renders several InputComponents that each contain an input text field that filters certain characters. The FormComponent counts and displays InputComponent renders and has a reset values button for the form.
 
 ### Immutability
 This challenge is focused around immutability.
@@ -18,15 +18,17 @@ _"React may batch multiple setState() calls into a single update for performance
 If altering an object or nested object that is in the state it is better to copy the object (not reference) alter it and send it back via this.setState (which accepts an object or a function that can return an object).
 
 
-Obeying the above also allows us to use the 'shouldComponentUpdate' method and '===' equality check which can be used to see if the object reference has changed.  This was used in this exercise in order to reduce the renders of the InputComponent child components.
+Obeying the above also allows us to use the 'shouldComponentUpdate' method and '===' equality check which can be used to see if the object reference has changed (and thus we dont need to iterate over both objects and compare each individual key-value pairs for changes). This was used in this exercise in order to reduce the renders of the InputComponent child components.
 
 General approach used for this exercise:
-Object.assign was used to create a copy of the object.
+
+- Object.assign was used to create an object copy.
 
 Future approaches to consider:
-Use the Immutability-helper or immutable.js library.
 
-Handy Resources:
+- Use the Immutability-helper or immutable.js library.
+
+Handy resource used for project:
 [Handling State in React: Four Immutable Approaches to Consider](https://medium.freecodecamp.org/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)
 
 ## HOW TO RUN
