@@ -24,6 +24,7 @@ class App extends Component {
       <div className="App">
         <FormComponent schema={schema}/>
         <FormComponent schema={schema}/>
+        <FormComponent schema={schema}/>
       </div>
     );
   }

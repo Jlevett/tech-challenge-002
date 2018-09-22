@@ -1,7 +1,33 @@
 # Tech Challenge Two
 
-talk about the other approaches to immutability
-    //https://medium.freecodecamp.org/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5
+##  About
+
+### Summary
+A FormComponent that renders several InputComponents that each contain a input text field that filter certain characters. The FormComponent counts and display InputComponent Renders and has a reset values button.
+
+### Immutability
+This challenge is focused around immutability.
+
+As per the react docs:
+
+_"Never mutate this.state directly, as calling setState() afterwards may replace the mutation you made. Treat this.state as if it were immutable."_
+
+_"React may batch multiple setState() calls into a single update for performance. Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state."_
+
+
+If altering an object or nested object that is in the state it is better to copy the object (not reference) alter it and send it back via this.setState (which accepts an object or a function that can return an object).
+
+
+Obeying the above also allows us to use the 'shouldComponentUpdate' method and '===' equality check which can be used to see if the object reference has changed.  This was used in this exercise in order to reduce the renders of the InputComponent child components.
+
+General approach used for this exercise:
+Object.assign was used to create a copy of the object.
+
+Future approaches to consider:
+Use the Immutability-helper or immutable.js library.
+
+Handy Resources:
+[Handling State in React: Four Immutable Approaches to Consider](https://medium.freecodecamp.org/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)
 
 ## HOW TO RUN
 

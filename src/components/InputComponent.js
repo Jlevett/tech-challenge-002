@@ -6,7 +6,7 @@ class InputComponent extends Component {
     //Will render the InputComponent if the inputObject has changed.
     shouldComponentUpdate(nextProps) {
         //Check if object is the same object or a different object.
-        if(nextProps.inputObject === this.props.inputObject){
+        if(nextProps.inputObject === this.props.inputObject) {
             return false;
         } else {
             //Update the render counter for this InputComponent
